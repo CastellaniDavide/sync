@@ -13,3 +13,4 @@ python.exe ./sync.py --batch
 REM Get end time
 ECHO End_time: "%date% %time%" >> ../log/trace.log
 ECHO. >> ../log/trace.log
+ 

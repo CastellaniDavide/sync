@@ -6,7 +6,7 @@ import pymysql
 from datetime import datetime
 
 __author__ = "help@castellanidavide.it"
-__version__ = "01.01 2020-10-04"
+__version__ = "01.01 2020-10-08"
 
 class sync:
 	def __init__ (self, debug=False, db=True, vs=False):
