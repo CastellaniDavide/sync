@@ -1,0 +1,814 @@
+Start_time: "05/10/2020 10:37:17,02" 
+End_time: "05/10/2020 10:37:17,22" 
+ 
+Start_time: "05/10/2020 10:37:53,63" 
+End_time: "05/10/2020 10:37:53,77" 
+ 
+Start_time: "05/10/2020 10:39:56,64" 
+End_time: "05/10/2020 10:39:56,75" 
+ 
+Start_time: "05/10/2020 10:40:50,14" 
+End_time: "05/10/2020 10:40:50,22" 
+ 
+Start_time: "05/10/2020 10:43:33,55" 
+End_time: "05/10/2020 10:43:33,63" 
+ 
+Start_time: "05/10/2020 10:43:45,66" 
+End_time: "05/10/2020 10:43:45,74" 
+ 
+Start_time: "05/10/2020 10:44:09,98" 
+Opened all files
+Start time (python): 2020-10-05 10:44:10.084571
+Running: sync.py
+End time: 2020-10-05 10:44:10.092495
+Total time (python): 0:00:00.007924
+End_time: "05/10/2020 10:44:10,10" 
+ 
+Start_time: "05/10/2020 10:56:40,36" 
+Opened all files
+Start time (python): 2020-10-05 10:56:40.471988
+Running: sync.py
+End_time: "05/10/2020 10:56:40,48" 
+ 
+Start_time: "05/10/2020 10:57:12,94" 
+Opened all files
+Start time (python): 2020-10-05 10:57:13.021216
+Running: sync.py
+End_time: "05/10/2020 10:57:13,05" 
+ 
+Start_time: "05/10/2020 10:57:46,35" 
+Opened all files
+Start time (python): 2020-10-05 10:57:46.432070
+Running: sync.py
+End_time: "05/10/2020 10:57:46,49" 
+ 
+Start_time: "05/10/2020 10:58:39,58" 
+Opened all files
+Start time (python): 2020-10-05 10:58:39.661539
+Running: sync.py
+All files cloned
+End time: 2020-10-05 10:58:39.666115
+Total time (python): 0:00:00.004576
+End_time: "05/10/2020 10:58:39,67" 
+ 
+Start_time: "05/10/2020 11:07:47,55" 
+End_time: "05/10/2020 11:07:47,63" 
+ 
+Start_time: "05/10/2020 11:08:35,78" 
+End_time: "05/10/2020 11:08:35,99" 
+ 
+Start_time: "05/10/2020 11:09:08,45" 
+End_time: "05/10/2020 11:09:08,53" 
+ 
+Start_time: "05/10/2020 11:09:27,79" 
+Opened all files
+Start time (python): 2020-10-05 11:09:27.871392
+Running: sync.py
+End_time: "05/10/2020 11:09:27,89" 
+ 
+Start_time: "05/10/2020 11:09:52,02" 
+Opened all files
+Start time (python): 2020-10-05 11:09:52.082694
+Running: sync.py
+All files cloned
+End time: 2020-10-05 11:09:52.087771
+Total time (python): 0:00:00.005077
+End_time: "05/10/2020 11:09:52,09" 
+ 
+Start_time: "05/10/2020 11:10:36,94" 
+Opened all files
+Start time (python): 2020-10-05 11:10:37.017171
+Running: sync.py
+All files cloned
+End time: 2020-10-05 11:10:37.024859
+Total time (python): 0:00:00.007688
+End_time: "05/10/2020 11:10:37,03" 
+ 
+Opened all files
+Start time (python): 2020-10-07 08:01:25.930531
+Running: sync.py
+All files cloned
+Connected
+End time: 2020-10-07 08:01:27.267284
+Total time (python): 0:00:01.336753
+
+Opened all files
+Start time (python): 2020-10-07 15:00:48.813723
+Running: sync.py
+Opened all files
+Start time (python): 2020-10-07 15:01:11.094499
+Running: sync.py
+Opened all files
+Start time (python): 2020-10-07 15:01:19.357500
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:01:19.357500
+Total time (python): 0:00:00
+
+Opened all files
+Start time (python): 2020-10-07 15:01:58.654740
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:01:58.654740
+Total time (python): 0:00:00
+
+Opened all files
+Start time (python): 2020-10-07 15:02:36.014562
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:02:36.023168
+Total time (python): 0:00:00.008606
+
+Opened all files
+Start time (python): 2020-10-07 15:03:10.374501
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:03:10.374501
+Total time (python): 0:00:00
+
+Opened all files
+Start time (python): 2020-10-07 15:03:31.184697
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:03:31.184697
+Total time (python): 0:00:00
+
+Opened all files
+Start time (python): 2020-10-07 15:03:40.424585
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:03:40.424585
+Total time (python): 0:00:00
+
+Opened all files
+Start time (python): 2020-10-07 15:04:07.499635
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:04:07.501636
+Total time (python): 0:00:00.002001
+
+Opened all files
+Start time (python): 2020-10-07 15:04:34.703917
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:04:34.724859
+Total time (python): 0:00:00.020942
+
+Opened all files
+Start time (python): 2020-10-07 15:05:03.078011
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:05:03.085512
+Total time (python): 0:00:00.007501
+
+Opened all files
+Start time (python): 2020-10-07 15:22:10.653540
+Running: sync.py
+All files cloned
+End time: 2020-10-07 15:22:10.657542
+Total time (python): 0:00:00.004002
+
+Opened all files
+Start time (python): 2020-10-07 15:28:18.322697
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:28:48.029941
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:30:21.342827
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:32:53.895644
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:33:42.689397
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:33:57.306502
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:34:16.154763
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:34:38.033104
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:35:04.990719
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:35:32.608036
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:36:28.526804
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:37:10.803313
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:38:20.949515
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:39:00.224849
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:39:18.947689
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:40:11.291596
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+Opened all files
+Start time (python): 2020-10-07 15:41:01.623590
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption" varchar(255), "Description" varchar(255), "Status" varchar(255), "Manufacturer" varchar(255), "Name" varchar(255), "GuaranteesDelivery" varchar(255), "GuaranteesSequencing" varchar(255), "MaximumAddressSize" varchar(255), "MaximumMessageSize" varchar(255), "SupportsConnectData" varchar(255), "SupportsEncryption" varchar(255), "SupportsGracefulClosing" varchar(255), "SupportsGuaranteedBandwidth" varchar(255), "SupportsQualityofService" varchar(255), "Date_local" varchar(255), "Date_universal_microsecond" varchar(255), 
+);
+Opened all files
+Start time (python): 2020-10-07 15:41:50.889519
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption" varchar(255), "Description" varchar(255), "Status" varchar(255), "Manufacturer" varchar(255), "Name" varchar(255), "GuaranteesDelivery" varchar(255), "GuaranteesSequencing" varchar(255), "MaximumAddressSize" varchar(255), "MaximumMessageSize" varchar(255), "SupportsConnectData" varchar(255), "SupportsEncryption" varchar(255), "SupportsGracefulClosing" varchar(255), "SupportsGuaranteedBandwidth" varchar(255), "SupportsQualityofService" varchar(255), "Date_local" varchar(255), "Date_universal_microsecond" varchar(255), "
+);
+Opened all files
+Start time (python): 2020-10-07 15:42:44.715477
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption" varchar(255), "Description" varchar(255), "Status" varchar(255), "Manufacturer" varchar(255), "Name" varchar(255), "GuaranteesDelivery" varchar(255), "GuaranteesSequencing" varchar(255), "MaximumAddressSize" varchar(255), "MaximumMessageSize" varchar(255), "SupportsConnectData" varchar(255), "SupportsEncryption" varchar(255), "SupportsGracefulClosing" varchar(255), "SupportsGuaranteedBandwidth" varchar(255), "SupportsQualityofService" varchar(255), "Date_local" varchar(255), "Date_universal_microsecond" varchar(255), );
+Opened all files
+Start time (python): 2020-10-07 15:43:01.303690
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption" varchar(255), "Description" varchar(255), "Status" varchar(255), "Manufacturer" varchar(255), "Name" varchar(255), "GuaranteesDelivery" varchar(255), "GuaranteesSequencing" varchar(255), "MaximumAddressSize" varchar(255), "MaximumMessageSize" varchar(255), "SupportsConnectData" varchar(255), "SupportsEncryption" varchar(255), "SupportsGracefulClosing" varchar(255), "SupportsGuaranteedBandwidth" varchar(255), "SupportsQualityofService" varchar(255), "Date_local" varchar(255), "Date_universal_microsecond" varchar(255));
+Opened all files
+Start time (python): 2020-10-07 15:43:17.118862
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption" varchar(255), "Description" varchar(255), "Status" varchar(255), "Manufacturer" varchar(255), "Name" varchar(255), "GuaranteesDelivery" varchar(255), "GuaranteesSequencing" varchar(255), "MaximumAddressSize" varchar(255), "MaximumMessageSize" varchar(255), "SupportsConnectData" varchar(255), "SupportsEncryption" varchar(255), "SupportsGracefulClosing" varchar(255), "SupportsGuaranteedBandwidth" varchar(255), "SupportsQualityofService" varchar(255), "Date_local" varchar(255), "Date_universal_microsecond" varchar(255));
+Opened all files
+Start time (python): 2020-10-07 15:45:36.611699
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, "Caption varchar(255), "Description varchar(255), "Status varchar(255), "Manufacturer varchar(255), "Name varchar(255), "GuaranteesDelivery varchar(255), "GuaranteesSequencing varchar(255), "MaximumAddressSize varchar(255), "MaximumMessageSize varchar(255), "SupportsConnectData varchar(255), "SupportsEncryption varchar(255), "SupportsGracefulClosing varchar(255), "SupportsGuaranteedBandwidth varchar(255), "SupportsQualityofService varchar(255), "Date_local varchar(255), "Date_universal_microsecond varchar(255));
+Opened all files
+Start time (python): 2020-10-07 15:45:59.966055
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255), ,Description varchar(255), ,Status varchar(255), ,Manufacturer varchar(255), ,Name varchar(255), ,GuaranteesDelivery varchar(255), ,GuaranteesSequencing varchar(255), ,MaximumAddressSize varchar(255), ,MaximumMessageSize varchar(255), ,SupportsConnectData varchar(255), ,SupportsEncryption varchar(255), ,SupportsGracefulClosing varchar(255), ,SupportsGuaranteedBandwidth varchar(255), ,SupportsQualityofService varchar(255), ,Date_local varchar(255), ,Date_universal_microsecond varchar(255);
+Opened all files
+Start time (python): 2020-10-07 15:46:19.334280
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255);
+Opened all files
+Start time (python): 2020-10-07 15:46:37.407268
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255));
+Opened all files
+Start time (python): 2020-10-07 15:47:26.479447
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:48:23.508610
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:49:00.148121
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+CREATE TABLE IF NOT EXIST example3 (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:49:46.350532
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:50:04.070204
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:52:26.948213
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:52:44.632843
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+Opened all files
+Start time (python): 2020-10-07 15:53:34.648050
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 15:54:47.889267
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 15:59:50.470681
+Running: sync.py
+All files cloned
+ - 0° File
+Opened all files
+Start time (python): 2020-10-07 16:00:25.624741
+Running: sync.py
+All files cloned
+ - 0° File
+Opened all files
+Start time (python): 2020-10-07 16:01:00.628662
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 16:02:05.230279
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 16:03:44.521246
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:03:47.198062
+Total time (python): 0:00:02.676816
+
+Opened all files
+Start time (python): 2020-10-07 16:04:40.291549
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:04:42.797895
+Total time (python): 0:00:02.506346
+
+Opened all files
+Start time (python): 2020-10-07 16:05:03.233991
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:05:05.854017
+Total time (python): 0:00:02.620026
+
+Opened all files
+Start time (python): 2020-10-07 16:07:34.285822
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:07:36.961919
+Total time (python): 0:00:02.676097
+
+Opened all files
+Start time (python): 2020-10-07 16:12:46.439185
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+CREATE TABLE IF NOT EXISTS netinfo_history (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+CREATE TABLE IF NOT EXISTS osversion (ID int AUTO_INCREMENT, PC_name varchar(255),_OS varchar(255),_OS_version varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+End time: 2020-10-07 16:12:49.024370
+Total time (python): 0:00:02.585185
+
+Opened all files
+Start time (python): 2020-10-07 16:13:39.995664
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:13:42.509917
+Total time (python): 0:00:02.514253
+
+Opened all files
+Start time (python): 2020-10-07 16:16:49.339303
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:16:52.042633
+Total time (python): 0:00:02.703330
+
+Opened all files
+Start time (python): 2020-10-07 16:19:11.139700
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:19:13.675965
+Total time (python): 0:00:02.536265
+
+Opened all files
+Start time (python): 2020-10-07 16:21:46.164645
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+CREATE TABLE IF NOT EXISTS netinfo_history (ID int AUTO_INCREMENT, Caption varchar(255),Description varchar(255),Status varchar(255),Manufacturer varchar(255),Name varchar(255),GuaranteesDelivery varchar(255),GuaranteesSequencing varchar(255),MaximumAddressSize varchar(255),MaximumMessageSize varchar(255),SupportsConnectData varchar(255),SupportsEncryption varchar(255),SupportsGracefulClosing varchar(255),SupportsGuaranteedBandwidth varchar(255),SupportsQualityofService varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+CREATE TABLE IF NOT EXISTS osversion (ID int AUTO_INCREMENT, PC_name varchar(255),_OS varchar(255),_OS_version varchar(255),Date_local varchar(255),Date_universal_microsecond varchar(255), PRIMARY KEY (ID));
+End time: 2020-10-07 16:21:48.805638
+Total time (python): 0:00:02.640993
+
+Opened all files
+Start time (python): 2020-10-07 16:22:07.955783
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:22:10.491827
+Total time (python): 0:00:02.536044
+
+Opened all files
+Start time (python): 2020-10-07 16:22:27.010560
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:22:29.628786
+Total time (python): 0:00:02.618226
+
+Opened all files
+Start time (python): 2020-10-07 16:22:51.526694
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:22:54.045659
+Total time (python): 0:00:02.518965
+
+Opened all files
+Start time (python): 2020-10-07 16:23:43.542648
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:23:45.974996
+Total time (python): 0:00:02.432348
+
+Opened all files
+Start time (python): 2020-10-07 16:24:12.062775
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+CREATE TABLE IF NOT EXISTS usb (ID int AUTO_INCREMENT, Last_User varchar(255),Device_Name varchar(255),Description varchar(255),Device_Type varchar(255),Connected varchar(255),Safe_To_Unplug varchar(255),Disabled varchar(255),USB_Hub varchar(255),Drive_Letter varchar(255),Serial_Number varchar(255),Created_Date varchar(255),Last_Plug/Unplug_Date varchar(255),VendorID varchar(255),ProductID varchar(255),Firmware_Revision varchar(255),USB_Class varchar(255),USB_SubClass varchar(255),USB_Protocol varchar(255),Hub_/_Port varchar(255),Computer_Name varchar(255),Vendor_Name varchar(255),Product_Name varchar(255),ParentId_Prefix varchar(255),Service_Name varchar(255),Service_Description varchar(255),Driver_Filename varchar(255),Device_Class varchar(255),Device_Mfg varchar(255),Power varchar(255),USB_Version varchar(255),Driver_Description varchar(255),Driver_Version varchar(255),Instance_ID varchar(255), PRIMARY KEY (ID));
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:24:14.360158
+Total time (python): 0:00:02.297383
+
+Opened all files
+Start time (python): 2020-10-07 16:25:03.126734
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 16:25:30.858038
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 16:25:51.302855
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+Opened all files
+Start time (python): 2020-10-07 16:27:18.522208
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:27:20.956358
+Total time (python): 0:00:02.434150
+
+Opened all files
+Start time (python): 2020-10-07 16:27:39.568969
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:27:41.893868
+Total time (python): 0:00:02.324899
+
+Opened all files
+Start time (python): 2020-10-07 16:29:15.038467
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+   - Values added ({items})
+   - Values added ({items})
+   - Values added ({items})
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+   - Values added ({items})
+End time: 2020-10-07 16:29:17.884132
+Total time (python): 0:00:02.845665
+
+Opened all files
+Start time (python): 2020-10-07 16:30:45.071376
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:46:47.370386","1601880407370386")
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:46:53.933475","1601880413933475")
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:47:00.617891","1601880420617891")
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+   - Values added ("My PC","Microsoft Windows 10 Home","10.0.19041","2020-10-01 14:55:20.392005","1601549720392005")
+End time: 2020-10-07 16:30:47.890951
+Total time (python): 0:00:02.819575
+
+Start_time: "07/10/2020 16:44:24,73" 
+Opened all files
+Start time (python): 2020-10-07 16:44:24.998359
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:44:27.358955
+Total time (python): 0:00:02.360596
+End_time: "07/10/2020 16:44:27,37" 
+ 
+Start_time: "07/10/2020 16:47:11,74" 
+Opened all files
+Start time (python): 2020-10-07 16:47:11.898447
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:46:47.370386","1601880407370386")
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:46:53.933475","1601880413933475")
+   - Values added ("Workstation","LanmanWorkstation","OK","Microsoft Corporation","Microsoft Windows Network","True","True","16","0","False","False","True","False","False","2020-10-05 10:47:00.617891","1601880420617891")
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+   - Values added ("My PC","Microsoft Windows 10 Home","10.0.19041","2020-10-01 14:55:20.392005","1601549720392005")
+End time: 2020-10-07 16:47:14.791374
+Total time (python): 0:00:02.892927
+End_time: "07/10/2020 16:47:14,80" 
+ 
+Opened all files
+Start time (python): 2020-10-07 16:54:45.434031
+Running: sync.py
+All files cloned
+ - 0° File
+   - Connected 0° database
+   - Connected 0° table
+ - 1° File
+   - Connected 1° database
+   - Connected 1° table
+ - 2° File
+   - Connected 2° database
+   - Connected 2° table
+End time: 2020-10-07 16:54:47.821332
+Total time (python): 0:00:02.387301
+
+
+ 

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\bin",
+    "\\docs",
+    "\\flussi",
+    "\\flussi\\cloned",
+    "\\log",
+    "\\requirements"
+  ],
+  "SelectedNode": "\\bin\\sync.py",
+  "PreviewInSolutionExplorer": false
+}
