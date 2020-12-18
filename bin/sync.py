@@ -74,7 +74,10 @@ class sync:
 	def PC_name():
 		""" Return the PC user-name in standard mode
 		"""
-		return os.getlogin().replace(" ", "_")
+		try:
+			return os.getlogin().replace(" ", "_")
+		except:
+			return "PCname"
 		
 	def csv2array(csv):
 		""" Converts csv file to a py array
