@@ -26,6 +26,8 @@ jobs:
         mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
         mysql database: 'sync' # Optional, default value is "test". The specified database which will be create
         mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
+        host port: 3889
+        container port: 3889
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
