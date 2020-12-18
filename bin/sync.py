@@ -33,8 +33,9 @@ class sync:
 		self.copy()
 		
 		# Sync online if possible
+		self.online_sync_all()
 		try:
-			self.online_sync_all()
+			pass
 		except:
 			self.print("Internet/ DB(s) not avariable")
 		
