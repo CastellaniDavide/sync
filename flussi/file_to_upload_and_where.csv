@@ -1,2 +1,2 @@
 "Local directory","Local_files","host","database","username","password"
-"./flussi/","testfile.csv","0.0.0.0:3306","sync","syncpws"
+"./flussi/","testfile.csv","localhost","sync","syncpws"
