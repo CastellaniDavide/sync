@@ -47,9 +47,9 @@ class sync:
 		""" Copy all files in flussi folder
 		"""
 		try:
-			for line in sync.csv2array(local_files)[1:]:
+			for line in sync.csv2array(self.local_files)[1:]:
 				file_path = line[0] + line[1]
-				open(os.path.join(self.folder, "flussi", "cloned", f"""{sync.PC_name()}_{line[1]}"""), "w+").write(open(file_path).read())
+				open(os.path.join(self.folder, "cloned", f"""{sync.PC_name()}_{line[1]}"""), "w+").write(open(file_path).read())
 
 			self.print("All files copied offline")
 		except:
@@ -131,19 +131,19 @@ class sync:
 			connection = pymysql.connect(host, user, password, database)
 			self.print(f"   - Connected {i}° database")
 
-			self.sync_online_single(file, connection)
+			self.sync_online_single(file, connection, tablename)
 
-	def sync_online_single(self, file, connection):
+	def sync_online_single(self, file, connection, tablename):
 		""" Sync a single file
 		"""
 		with connection.cursor() as cursor:
-			file_to_sync = sync.csv2array(open(os.path.join(base_dir, "flussi", "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
+			file_to_sync = sync.csv2array(open(os.path.join(self.folder, "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
 			
 			cursor.execute(f"""CREATE TABLE IF NOT EXISTS {tablename} (ID int AUTO_INCREMENT, {variabiles} varchar(255), PRIMARY KEY (ID));""")
-			self.print(f"   - Connected {i}° table")
+			self.print(f"   - Connected {tablename} table")
 
 			# Add all new items
 			for j, items in enumerate(file_to_sync[1:]):
