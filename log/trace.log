@@ -817,3 +817,19 @@ All files cloned
 End time: 2020-10-08 15:40:24.892676
 Total time (python): 0:00:00.001091
 
+Start_time: "09/10/2020 16:08:12,63" 
+Opened all files
+Start time (python): 2020-10-09 16:08:13.093951
+Running: sync.py
+All files cloned
+End time: 2020-10-09 16:08:13.093951
+Total time (python): 0:00:00
+End_time: "09/10/2020 16:08:13,11" 
+ 
+Opened all files
+Start time (python): 2020-10-09 16:10:21.099831
+Running: sync.py
+All files cloned
+End time: 2020-10-09 16:10:21.099831
+Total time (python): 0:00:00
+
