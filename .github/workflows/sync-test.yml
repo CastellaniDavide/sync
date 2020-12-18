@@ -47,4 +47,4 @@ jobs:
         pytest
     - name: Log(s)
       run: |
-        cat ./flussi/*
+        cat ./log/*
