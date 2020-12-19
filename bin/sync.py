@@ -134,7 +134,7 @@ class sync:
 			tablename = file[1].replace(".csv", "")
 
 			# Connenct to the DB
-			connection = None #pymysql.connect(host, user, password, database, port)
+			connection = pymysql.connect(host, user, password, database, port)
 			self.print(f"   - Connected {i}° database")
 
 			self.sync_online_single(file, connection, database, tablename)
