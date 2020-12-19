@@ -86,7 +86,7 @@ jobs:
         cat ./log/*
     - name: Upload file(s)
       run: |
-         mv ./flussi/cloned/PC_name testfile.csv/artifact/testfile.csv
+         mv ./flussi/cloned/PCname_testfile.csv testfile.csv/artifact/testfile.csv
     - name: View file structure
       run: |
         sudo apt install tree
