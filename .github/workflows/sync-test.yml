@@ -8,10 +8,10 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
+    runs-on: ubuntu-latest
+    #strategy:
+    #    matrix:
+    #        os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     services:
             mysql:
