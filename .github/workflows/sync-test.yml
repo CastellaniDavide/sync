@@ -8,10 +8,10 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
+    runs-on: ubuntu-latest# ${{ matrix.os }}
+    #strategy:
+     #   matrix:
+      #      os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     steps:
     - uses: actions/checkout@v2
@@ -33,6 +33,7 @@ jobs:
         docker run --name=mysql -d mysql/mysql-server:latest --publish 6603:3306
         docker ps
         sudo apt-get install mysql-client -y
+        ping -c 4 127.0.0.1
         mysql -usync -psyncpws -h127.0.0.1 -P6603 -e 'CREATE DATABASE sync'
     - name: Install dependencies
       run: |
