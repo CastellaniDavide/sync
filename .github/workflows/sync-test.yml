@@ -30,7 +30,7 @@ jobs:
         container port: 3889
     - name: some try
       run : |
-        docker images
+        docker ps
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
