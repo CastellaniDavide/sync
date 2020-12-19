@@ -30,10 +30,11 @@ jobs:
         container port: 3889
     - name: Start Database
       run : |
-        docker run --name=mysql -d mysql/mysql-server:latest --publish 6603:3306
+        docker run --name=mysql -d mysql --publish 6603:3306
         docker ps
         sudo apt-get install mysql-client -y
-        ping -c 4 127.0.0.1
+        ping -c 4 127.0.0.1:3306
+        ping -c 4 127.0.0.1:6603
         mysql -usync -psyncpws -h127.0.0.1 -P6603 -e 'CREATE DATABASE sync'
     - name: Install dependencies
       run: |
