@@ -20,14 +20,21 @@ jobs:
       with:
         python-version: 3.8
     - name: Setup Database
-      uses: mirromutth/mysql-action@v1.1
-      with:
-        collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
-        mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
-        mysql database: 'sync' # Optional, default value is "test". The specified database which will be create
-        mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
-        host port: 3889
-        container port: 3889
+      run: |
+        apt-get update && apt-get upgrade -y
+        echo "America/Chicago" > /etc/timezone
+        dpkg-reconfigure -f noninteractive tzdata
+        ufw enable
+        ufw allow 22
+        ufw allow 3306
+        apt-get -y install zsh htop
+        echo "mysql-server-5.6 mysql-server/root_password password root" | sudo debconf-set-selections
+        echo "mysql-server-5.6 mysql-server/root_password_again password root" | sudo debconf-set-selections
+        apt-get -y install mysql-server-5.6
+        mysql_secure_installation
+        sed -i 's/127\.0\.0\.1/0\.0\.0\.0/g' /etc/mysql/my.cnf
+        mysql -uroot -p -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES;'
+        service mysql restart
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

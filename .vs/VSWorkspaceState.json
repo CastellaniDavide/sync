@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\.github",
+    "\\.github\\workflows",
     "\\bin",
     "\\docs",
     "\\flussi",
@@ -9,6 +10,6 @@
     "\\log",
     "\\requirements"
   ],
-  "SelectedNode": "\\bin\\sync.py",
+  "SelectedNode": "\\.github\\workflows\\sync-test.yml",
   "PreviewInSolutionExplorer": false
 }
