@@ -19,8 +19,7 @@ jobs:
                 env:
                     MYSQL_ALLOW_EMPTY_PASSWORD: yes
                     MYSQL_DATABASE: sync
-                    MYSQL_USER: sync
-                    MYSQL_PASSWORD: syncpws
+                    MYSQL_ROOT_USER: sync
                     MYSQL_ROOT_PASSWORD: syncpws
                 ports:
                     - 3306
