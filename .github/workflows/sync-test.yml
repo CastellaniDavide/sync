@@ -41,7 +41,7 @@ jobs:
     - name: Start Database
       run : |
         sudo apt-get install mysql-client -y
-        mysql -usync -psyncpws -h127.0.0.1 -P3306 -e 'CREATE DATABASE sync'
+        mysql -usync -psyncpws -h0.0.0.0 -P32768 -e 'CREATE DATABASE sync'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
