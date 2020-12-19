@@ -13,29 +13,39 @@ jobs:
      #   matrix:
       #      os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
+    services:
+            mysql:
+                image: mysql:8.0
+                env:
+                    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+                    MYSQL_DATABASE: laravel_tags
+                ports:
+                    - 3306
+                options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Setup Database
-      uses: mirromutth/mysql-action@v1.1
-      with:
-        collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
-        mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
-        mysql database: 'sync' # Optional, default value is "test". The specified database which will be create
-        mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
-        host port: 3889
-        container port: 3889
+    #- name: Setup Database
+    #  uses: mirromutth/mysql-action@v1.1
+    #  with:
+    #    collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
+    #    mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
+    #    mysql database: 'sync' # Optional, default value is "test". The specified database which will be create
+    #    mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
+    #    host port: 3889
+    #    container port: 3889
     - name: Start Database
       run : |
-        docker run --name=mysql -d mysql --publish 6603:3306
-        docker ps
-        sudo apt-get install mysql-client -y
-        # ping -c 4 127.0.0.1 3306
+        ping -c 4 127.0.0.1 3306
         ping -c 4 127.0.0.1 6603
-        mysql -usync -psyncpws -h127.0.0.1 -P6603 -e 'CREATE DATABASE sync'
+     #   docker run --name=mysql -d mysql --publish 6603:3306
+    #    docker ps
+    #    sudo apt-get install mysql-client -y
+   #     mysql -usync -psyncpws -h127.0.0.1 -P6603 -e 'CREATE DATABASE sync'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
