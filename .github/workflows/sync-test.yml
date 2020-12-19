@@ -112,8 +112,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2
-      with:
-        path: sync
     - name: Install Database dependencies and test it
       run : |
         sudo apt-get install mysql-client -y
