@@ -126,13 +126,14 @@ class sync:
 			
 			# Get configuration
 			host = file[2]
-			user = file[4]
-			password = file[5]
-			database = file[3]
+			port = file[3]
+			user = file[5]
+			password = file[6]
+			database = file[4]
 			tablename = file[1].replace(".csv", "")
 
 			# Connenct to the DB
-			connection = pymysql.connect(host, user, password, database)
+			connection = pymysql.connect(host, user, password, database, port)
 			self.print(f"   - Connected {i}° database")
 
 			self.sync_online_single(file, connection, tablename)
