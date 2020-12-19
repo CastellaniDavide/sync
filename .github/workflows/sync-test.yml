@@ -53,4 +53,5 @@ jobs:
       run: |
         cat ./log/*
     - name: Print DB(s)
+      run: |
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW tables;" # Check
