@@ -19,7 +19,6 @@ jobs:
                 env:
                     MYSQL_ALLOW_EMPTY_PASSWORD: yes
                     MYSQL_DATABASE: sync
-                    MYSQL_ROOT_USER: sync
                     MYSQL_ROOT_PASSWORD: syncpws
                 ports:
                     - 3306
@@ -43,7 +42,7 @@ jobs:
     - name: Start Database
       run : |
         sudo apt-get install mysql-client -y
-        mysql -usync -psyncpws -h0.0.0.0 -P32768 -e 'SELECT * FROM sys.databases' # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e 'SELECT * FROM sys.databases' # Check
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
