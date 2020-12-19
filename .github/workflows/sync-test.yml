@@ -28,10 +28,12 @@ jobs:
         mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
         host port: 3889
         container port: 3889
-    - name: some try
+    - name: Start Database
       run : |
         docker run --name=mysql -d mysql/mysql-server:latest
         docker ps
+        sudo apt-get install mysql-client -y
+        mysql -usync -psyncpws -h127.0.0.1 -P6603 -e 'CREATE DATABASE sync'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
