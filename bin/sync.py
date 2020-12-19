@@ -136,9 +136,9 @@ class sync:
 			connection = pymysql.connect(host, user, password, database, port)
 			self.print(f"   - Connected {i}° database")
 
-			self.sync_online_single(file, connection, tablename)
+			self.sync_online_single(file, connection, database, tablename)
 
-	def sync_online_single(self, file, connection, tablename):
+	def sync_online_single(self, file, connection, database, tablename):
 		""" Sync a single file
 		"""
 		with connection.cursor() as cursor:
@@ -154,9 +154,15 @@ class sync:
 			for j, items in enumerate(file_to_sync[1:]):
 				items = sync.array2csv([items,])[:-1:]
 
-				cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
+				try:
+					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
+				except:
+					cursor.execute(f"SELECT * FROM {database}.{tablename} WHERE ({variabiles}) = ({items});")
 				if len(cursor.fetchall()) == 0: # If not exist add it
-					cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
+					try:
+						cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
+					except:
+						cursor.execute(f"INSERT INTO {database}.{tablename} ({variabiles}) VALUES ({items});")
 					self.print(f"   - Values added ({items})")
 
 		# Push changes
