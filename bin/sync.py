@@ -16,12 +16,13 @@ class sync:
 		self.start_time = datetime.now()
 		self.debug = debug
 		self.vs = vs
+		print(folder)
 
 		if folder == None:
 			self.folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "flussi")
+			print(self.folder)
 		else:
 			self.folder = folder
-
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
 		self.local_files = open(os.path.join(self.folder, "file_to_upload_and_where.csv"), "r").read()
 		
@@ -133,7 +134,7 @@ class sync:
 			tablename = file[1].replace(".csv", "")
 
 			# Connenct to the DB
-			connection = pymysql.connect(host, user, password, database, port)
+			connection = None #pymysql.connect(host, user, password, database, port)
 			self.print(f"   - Connected {i}° database")
 
 			self.sync_online_single(file, connection, database, tablename)
@@ -146,11 +147,11 @@ class sync:
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
-			cursor.execute("SHOW DATABASES;")
+
 			try:
-				cursor.execute(f"""CREATE TABLE {database}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in [variabiles]])[1:-1]},PRIMARY KEY (ID));""")
+				cursor.execute(f"""CREATE TABLE {database}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")},PRIMARY KEY (ID));""")
 			except:
-				cursor.execute(f"""CREATE TABLE {tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in [variabiles]])[1:-1]},PRIMARY KEY (ID));""")
+				cursor.execute(f"""CREATE TABLE {tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")},PRIMARY KEY (ID));""")
 			self.print(f"   - Connected {tablename} table")
 
 			# Add all new items
@@ -188,4 +189,4 @@ if __name__ == "__main__":
 		debug = False
 		vs = False
 
-	sync(debug, db, vs)
+	sync(debug=debug, vs=vs)
