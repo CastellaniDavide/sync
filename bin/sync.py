@@ -6,39 +6,47 @@ import pymysql
 from datetime import datetime
 
 __author__ = "help@castellanidavide.it"
-__version__ = "01.01 2020-12-18"
+__version__ = "01.02 2020-12-19"
 
 class sync:
-	def __init__ (self, folder=None, debug=False, vs=False):
+	def __init__ (self, agent=True, input_folder=None, output_folder=None, debug=False,):
 		"""Where it all begins
 		"""
+		# Open log
+		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
+		self.print(f"Start")
+		self.print("Running: sync.py")
+
 		#Setup basic variabiles
 		self.start_time = datetime.now()
 		self.debug = debug
-		self.vs = vs
-		print(folder)
+		self.agent = agent
 
-		if folder == None:
-			self.folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "flussi")
-			print(self.folder)
+		if input_folder == None:
+			self.input_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "flussi")
 		else:
-			self.folder = folder
-		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
-		self.local_files = open(os.path.join(self.folder, "file_to_upload_and_where.csv"), "r").read()
-		
-		self.print(f"Start")
-		self.print(f"Opened all files")
-		self.print("Running: sync.py")	
+			self.input_folder = input_folder
+
+		if output_folder == None:
+			self.output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "flussi", "cloned")
+		else:
+			self.output_folder = output_folder
+
+		self.print("Variables setted")
+
+		# Read the config controller
+		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
+		self.print("Configuration readed")
 
 		# Sync offline
 		self.copy()
 		
-		# Sync online if possible
-		self.online_sync_all()
-		try:
-			pass
-		except:
-			self.print("Internet/ DB(s) not avariable")
+		if not self.agent:
+			# Sync online if possible
+			try:
+				self.online_sync_all()
+			except:
+				self.print("Internet/ DB(s) not avariable")
 		
 		# End
 		self.print(f"End time: {datetime.now()}")
@@ -46,12 +54,12 @@ class sync:
 		self.log.close()
 
 	def copy(self):
-		""" Copy all files in flussi folder
+		""" Copy all files in flussi input_folder
 		"""
 		try:
 			for line in sync.csv2array(self.local_files)[1:]:
 				file_path = line[0] + line[1]
-				open(os.path.join(self.folder, "cloned", f"""{sync.PC_name()}_{line[1]}"""), "w+").write(open(file_path).read())
+				open(os.path.join(self.output_folder, f"""{sync.PC_name()}_{line[1]}"""), "w+").write(open(file_path).read())
 
 			self.print("All files copied offline")
 		except:
@@ -143,7 +151,7 @@ class sync:
 		""" Sync a single file
 		"""
 		with connection.cursor() as cursor:
-			file_to_sync = sync.csv2array(open(os.path.join(self.folder, "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
+			file_to_sync = sync.csv2array(open(os.path.join(self.input_folder, "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
@@ -162,6 +170,7 @@ class sync:
 					cursor.execute(f"SELECT * FROM {database}.{tablename} WHERE ({variabiles}) = ({items});")
 				except:
 					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
+
 				if len(cursor.fetchall()) == 0: # If not exist add it
 					try:
 						cursor.execute(f"INSERT INTO {database}.{tablename} ({variabiles}) VALUES ({items});")
@@ -173,20 +182,63 @@ class sync:
 		connection.commit()
 		connection.close()
 
-
 if __name__ == "__main__":
-	# debug flag
-	debug = True
+	# Check if user needs an help
+	if "-h" in sys.argv or "--help" in sys.argv:
+			documentation = ["usage sync",
+							"\t[--agent | -a]",
+							"\t[--agentless | -al]",
+							"\t[--batch | -b]",
+							"\t[--debug | -d]",
+							"\t[--input_folder= | -if=]",
+							"\t[--output_folder= | -of=]",
+							"",
+							"These are the sync flags:",
+							"\t--agent | -a					Run in the Agent mode",
+							"\t--agentless | -al			\tRun in the Agentless mode or Run as the core manager of the Agent structure",
+							"\t--batch | -b					Setting for the batch file",
+							"\t--debug | -d					Choose this if you want debug option (for eg. you can see the output on the screen)",
+							"",
+							"These are the sync setting:",
+							"\t--input_folder= | -if=		\t\t(OPTIONAL) You can choose the input file",
+							"\t--output_folder= | -of=		\t\t(OPTIONAL) You can choose the output file",
+							"",
+							"Extra:",
+							"\t--help or -h					You can see the documentation",
+							"",
+							"Made with ❤  by Castellani Davide (@DavideC03)",
+							""]
 
-	# visual studio flag
-	vs = True
+			for line in documentation:
+				print(line)
+	else:
+		# default values flag
+		debug = True
+		agent = False # if Talse is agentless
+		input_folder = None
+		output_folder = None
 
-	# database flag
-	db = True
+		# Check inputs
+		for arg in sys.argv:
+			if "--agent" in arg or "-a" in arg:
+				agent = True
 
-	# check if is launched by .bat file
-	if "--batch" in sys.argv or "-b" in sys.argv:
-		debug = False
-		vs = False
+			if "--agentless" in arg or "-al" in arg:
+				agent = False
 
-	sync(debug=debug, vs=vs)
+			if "--batch" in arg or "-b" in arg:
+				debug = False
+
+			if "--debug" in arg or "-d" in arg:
+				debug = True
+
+			if "--input_folder=" in arg or "-if=" in arg:
+				input_folder = arg.replace("--input_folder=", "").replace("-if=", "")
+
+			if "--output_folder=" in arg or "-of=" in arg:
+				output_folder = arg.replace("--output_folder=", "").replace("-of=", "")
+
+		try:
+			sync(agent=agent, input_folder=input_folder, output_folder=output_folder, debug=debug)
+		except:
+			raise Exception("There is an error, make sure you have made done all settings.")

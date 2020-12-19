@@ -8,7 +8,7 @@ REM Get init time
 ECHO Start_time: "%date% %time%" >> ../log/trace.log
 
 REM Call python code
-python.exe ./sync.py --batch
+python.exe ./sync.py --batch %*
 
 REM Get end time
 ECHO End_time: "%date% %time%" >> ../log/trace.log

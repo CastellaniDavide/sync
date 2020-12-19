@@ -1,5 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# Test 
+# Test sync code
 
 name: Sync test
 
@@ -9,10 +8,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    #strategy:
-    #    matrix:
-    #        os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
+    # Create the DB
     services:
             mysql:
                 image: mysql:8.0
