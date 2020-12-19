@@ -9,7 +9,7 @@ __author__ = "help@castellanidavide.it"
 __version__ = "01.02 2020-12-19"
 
 class sync:
-	def __init__ (self, agent=True, input_folder=None, output_folder=None, debug=False,):
+	def __init__ (self, agent=False, input_folder=None, output_folder=None, debug=False,):
 		"""Where it all begins
 		"""
 
@@ -20,6 +20,7 @@ class sync:
 
 		# Open log
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
+		self.log.write("Execution_code,Message,time")
 		self.print(f"Start")
 		self.print("Running: sync.py")
 
@@ -33,7 +34,7 @@ class sync:
 		else:
 			self.output_folder = output_folder
 
-		self.print("Variables setted")
+		self.print("Variabiles setted")
 
 		# Read the config controller
 		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
@@ -42,7 +43,7 @@ class sync:
 		# Sync offline
 		self.copy()
 		
-		if not self.agent:
+		if (not self.agent):
 			# Sync online if possible
 			try:
 				self.online_sync_all()
