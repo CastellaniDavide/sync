@@ -84,14 +84,14 @@ jobs:
     - name: Log(s)
       run: |
         cat ./log/*
-    - name: Upload file(s)
-      run: |
-         mv ./flussi/cloned/PCname_testfile.csv testfile.csv/artifact/testfile.csv
     - name: View file structure
       run: |
         sudo apt install tree
         tree
-
+    - name: Upload file(s)
+      run: |
+         cp ./flussi/cloned/PCname_testfile.csv testfile.csv/artifact/testfile.csv
+    
   sync-agent-2:
     needs: sync-agent-1
     runs-on: ubuntu-latest
@@ -132,7 +132,7 @@ jobs:
         tree
     - name: Download file(s)
       run: |
-         mv sync/artifact/testfile.csv ./flussi/testfile.csv
+         cp sync/artifact/testfile.csv ./flussi/testfile.csv
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
