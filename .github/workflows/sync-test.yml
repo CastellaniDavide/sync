@@ -42,7 +42,7 @@ jobs:
     - name: Start Database
       run : |
         sudo apt-get install mysql-client -y
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e 'SELECT * FROM sys.databases' # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e 'SELECT * FROM sysobjects WHERE xtype='U' ' # Check
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
