@@ -148,9 +148,9 @@ class sync:
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
 			
 			try:
-				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {tablename} (ID int AUTO_INCREMENT, {variabiles} varchar(255), PRIMARY KEY (ID));""")
-			except:
 				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {database}.{tablename} (ID int AUTO_INCREMENT, {variabiles} varchar(255), PRIMARY KEY (ID));""")
+			except:
+				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {tablename} (ID int AUTO_INCREMENT, {variabiles} varchar(255), PRIMARY KEY (ID));""")
 			self.print(f"   - Connected {tablename} table")
 
 			# Add all new items
@@ -158,14 +158,14 @@ class sync:
 				items = sync.array2csv([items,])[:-1:]
 
 				try:
-					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
-				except:
 					cursor.execute(f"SELECT * FROM {database}.{tablename} WHERE ({variabiles}) = ({items});")
+				except:
+					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
 				if len(cursor.fetchall()) == 0: # If not exist add it
 					try:
-						cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
-					except:
 						cursor.execute(f"INSERT INTO {database}.{tablename} ({variabiles}) VALUES ({items});")
+					except:
+						cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
 					self.print(f"   - Values added ({items})")
 
 		# Push changes
