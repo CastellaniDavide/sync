@@ -149,9 +149,9 @@ class sync:
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
 
 			try:
-				cursor.execute(f"""CREATE TABLE {database}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
+				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {database}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
 			except:
-				cursor.execute(f"""CREATE TABLE {tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
+				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
 			self.print(f"   - Connected {tablename} table")
 
 			# Add all new items
