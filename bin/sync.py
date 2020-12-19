@@ -12,15 +12,16 @@ class sync:
 	def __init__ (self, agent=True, input_folder=None, output_folder=None, debug=False,):
 		"""Where it all begins
 		"""
-		# Open log
+
+		#Setup basic variabiles
 		self.start_time = datetime.now()
+		self.debug = debug
+		self.agent = agent
+
+		# Open log
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
 		self.print(f"Start")
 		self.print("Running: sync.py")
-
-		#Setup basic variabiles
-		self.debug = debug
-		self.agent = agent
 
 		if input_folder == None:
 			self.input_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "flussi")
