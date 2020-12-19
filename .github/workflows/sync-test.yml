@@ -28,7 +28,7 @@ jobs:
         mysql root password: 'syncpws' # Required if "mysql user" is empty, default is empty. The root superuser password
         host port: 3889
         container port: 3889
-    - name: some try:
+    - name: some try
       run : |
         docker images
     - name: Install dependencies
