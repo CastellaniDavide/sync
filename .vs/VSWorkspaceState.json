@@ -7,9 +7,8 @@
     "\\docs",
     "\\flussi",
     "\\flussi\\cloned",
-    "\\log",
     "\\requirements"
   ],
-  "SelectedNode": "\\.github\\workflows\\sync-test.yml",
+  "SelectedNode": "\\bin\\sync.py",
   "PreviewInSolutionExplorer": false
 }
