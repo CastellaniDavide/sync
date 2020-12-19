@@ -13,12 +13,12 @@ class sync:
 		"""Where it all begins
 		"""
 		# Open log
+		self.start_time = datetime.now()
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
 		self.print(f"Start")
 		self.print("Running: sync.py")
 
 		#Setup basic variabiles
-		self.start_time = datetime.now()
 		self.debug = debug
 		self.agent = agent
 
