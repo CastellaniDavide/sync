@@ -30,6 +30,7 @@ jobs:
         container port: 3889
     - name: some try
       run : |
+        docker run --name=mysql -d mysql/mysql-server:latest
         docker ps
     - name: Install dependencies
       run: |
