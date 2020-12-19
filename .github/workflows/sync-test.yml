@@ -59,6 +59,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/upload-artifact@v2
+      with:
+        path: sync
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
@@ -82,10 +85,9 @@ jobs:
       run: |
         cat ./log/*
     - name: Upload file(s)
-      run: cp ./flussi/cloned/* sync/*
-    - uses: actions/upload-artifact@v2
-      with:
-        path: sync
+      run: |
+         mkdir -p sync/artifact
+         cp -a ./flussi/cloned/. sync/artifact/
     - name: View file structure
       run: |
         sudo apt install tree
@@ -109,6 +111,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/upload-artifact@v2
+      with:
+        path: sync
     - name: Install Database dependencies and test it
       run : |
         sudo apt-get install mysql-client -y
@@ -123,10 +128,8 @@ jobs:
         pip install flake8 pytest
         pip install -r requirements/requirements.txt
     - name: Download file(s)
-      run: cp sync/* ./flussi/*
-    - uses: actions/upload-artifact@v2
-      with:
-        path: sync
+      run: |
+         cp -a sync/artifact/. ./flussi/
     - name: View file structure
       run: |
         sudo apt install tree
