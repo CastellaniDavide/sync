@@ -83,7 +83,7 @@ jobs:
         cat ./log/*
     - name: Upload file(s)
       run: cp ./flussi/cloned/* sync/*
-      uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v2
       with:
         path: sync
     - name: View file structure
@@ -93,7 +93,6 @@ jobs:
 
   sync-agent-2:
     needs: sync-agent-1
-    
     runs-on: ubuntu-latest
 
     # Create the DB
@@ -125,7 +124,7 @@ jobs:
         pip install -r requirements/requirements.txt
     - name: Download file(s)
       run: cp sync/* ./flussi/*
-      uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v2
       with:
         path: sync
     - name: View file structure
