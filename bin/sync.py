@@ -126,7 +126,7 @@ class sync:
 			
 			# Get configuration
 			host = file[2]
-			port = file[3]
+			port = int(file[3])
 			user = file[5]
 			password = file[6]
 			database = file[4]
