@@ -155,7 +155,7 @@ class sync:
 		""" Sync a single file
 		"""
 		# Connenct to the DB for every file
-		connection = pymysql.connect(self.config['host'], self.config['user'], self.config['password'], self.config['database'], int(self.config['port']))
+		connection = pymysql.connect(self.config['host'], self.config['username'], self.config['password'], self.config['database'], int(self.config['port']))
 		self.print(f"   - Connected {i}° database for {file} table")
 
 		with connection.cursor() as cursor:
