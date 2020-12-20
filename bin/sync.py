@@ -149,14 +149,14 @@ class sync:
 			self.print(f" - {i}° File")
 			
 			# Get configuration
-			self.sync_online_single(file, i, tablename=file[1].replace(".csv", ""))
+			self.sync_online_single(file, i, tablename=file.replace(".csv", ""))
 
 	def sync_online_single(self, file, i, tablename):
 		""" Sync a single file
 		"""
 		# Connenct to the DB for every file
 		connection = pymysql.connect(self.config['host'], self.config['username'], self.config['password'], self.config['database'], int(self.config['port']))
-		self.print(f"   - Connected {i}° database for {file} table")
+		self.print(f"   - Connected {i}° database for {tablename} table")
 
 		with connection.cursor() as cursor:
 			file_to_sync = sync.csv2array(open(os.path.join(self.output_folder, file), "r").read())
