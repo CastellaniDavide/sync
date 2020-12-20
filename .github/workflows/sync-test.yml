@@ -8,7 +8,10 @@ jobs:
   # Agentless 
   sync-agentless:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     # Create the DB
     services:
