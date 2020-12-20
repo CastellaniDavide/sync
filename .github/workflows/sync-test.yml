@@ -123,6 +123,9 @@ jobs:
       run: |
          rm ./flussi/testfile.csv
          cp artifact/PCname_testfile.csv ./flussi/cloned/PCname_testfile.csv
+    - name: View file structure 2
+      run: |
+        tree
     - name: Test with pytest
       run: |
         pytest
