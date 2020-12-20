@@ -5,6 +5,7 @@ name: Sync test
 on: [push, pull_request]
 
 jobs:
+  # Agentless 
   sync-agentless:
 
     runs-on: ubuntu-latest
@@ -53,6 +54,7 @@ jobs:
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW TABLES FROM sync;" # Check
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.testfile;" # Show my test table content
 
+  # Agent part 2 
   sync-agent-1:
 
     runs-on: ubuntu-latest
@@ -87,13 +89,12 @@ jobs:
         tree
     - name: Upload file(s)
       run: |
-         mkdir sync
-         mkdir sync/artifact
-         cp ./flussi/cloned/PCname_testfile.csv sync/artifact/testfile.csv
+         cat ./flussi/cloned/PCname_testfile.csv > testfile.csv
     - uses: actions/upload-artifact@v2
       with:
-        path: sync
-    
+        path: testfile.csv
+
+  # Agent part 2 
   sync-agent-2:
     needs: sync-agent-1
     runs-on: ubuntu-latest
@@ -113,8 +114,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2
-      with:
-        path: sync
     - name: Install Database dependencies and test it
       run : |
         sudo apt-get install mysql-client -y
@@ -134,7 +133,8 @@ jobs:
         tree
     - name: Download file(s)
       run: |
-         cp sync/artifact/testfile.csv ./flussi/testfile.csv
+         rm ./flussi/testfile.csv
+         cp artifact/testfile.csv ./flussi/testfile.csv
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
