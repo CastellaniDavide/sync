@@ -9,7 +9,7 @@ __author__ = "help@castellanidavide.it"
 __version__ = "01.02 2020-12-20"
 
 class sync:
-	def __init__ (self, agent=False, input_folder=None, output_folder=None, debug=False,):
+	def __init__ (self, agent=False, sync_DB=True, input_folder=None, output_folder=None, debug=False,):
 		"""Where it all begins
 		"""
 
@@ -17,6 +17,7 @@ class sync:
 		self.start_time = datetime.now()
 		self.debug = debug
 		self.agent = agent
+		self.sync_DB = sync_DB
 
 		# Open log
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.timestamp()}sync.log"), "a+")
@@ -45,7 +46,8 @@ class sync:
 
 			if (self.agent):
 				self.copy()	# Copy to the wanted folder
-			else:
+
+			if self.sync_DB:
 				# Sync online if possible
 				try:
 					self.online_sync_all()
@@ -196,6 +198,8 @@ if __name__ == "__main__":
 							"\t[--agentless | -al]",
 							"\t[--batch | -b]",
 							"\t[--debug | -d]",
+							"\t[--sync | -s]",
+							"\t[--nsync | -ns]",
 							"\t[--input_folder= | -if=]",
 							"\t[--output_folder= | -of=]",
 							"",
@@ -204,6 +208,8 @@ if __name__ == "__main__":
 							"\t--agentless | -al			\tRun in the Agentless mode or Run as the core manager of the Agent structure",
 							"\t--batch | -b					Setting for the batch file",
 							"\t--debug | -d					Choose this if you want debug option (for eg. you can see the output on the screen)",
+							"\t--sync | -s					Try to sync online",
+							"\t--nsync | -ns				Don't sync online",
 							"",
 							"These are the sync setting:",
 							"\t--input_folder= | -if=		\t\t(OPTIONAL) You can choose the input file",
@@ -223,6 +229,7 @@ if __name__ == "__main__":
 		agent = False # if Talse is agentless
 		input_folder = None
 		output_folder = None
+		sync_DB = True
 
 		# Check inputs
 		for arg in sys.argv:
@@ -238,6 +245,12 @@ if __name__ == "__main__":
 			if "--debug" in arg or "-d" in arg:
 				debug = True
 
+			if "--sync" in arg or "-s" in arg:
+				sync_DB = True
+
+			if "--nsync" in arg or "-ns" in arg:
+				sync_DB = False
+
 			if "--input_folder=" in arg or "-if=" in arg:
 				input_folder = arg.replace("--input_folder=", "").replace("-if=", "")
 
@@ -245,6 +258,6 @@ if __name__ == "__main__":
 				output_folder = arg.replace("--output_folder=", "").replace("-of=", "")
 
 		try:
-			sync(agent=agent, input_folder=input_folder, output_folder=output_folder, debug=debug)
+			sync(agent=agent, sync_DB=sync_DB, input_folder=input_folder, output_folder=output_folder, debug=debug)
 		except:
 			raise Exception("There is an error, make sure you have made done all settings.")
