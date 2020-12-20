@@ -43,7 +43,7 @@ class sync:
 			if self.sync_DB : self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
 			if self.sync_DB : self.print(str(self.config))
 
-			if (not self.agent or not self.sync_DB):
+			if (not self.agent or (self.agent and not self.sync_DB)):
 				self.copy()	# Copy to the wanted folder
 
 			if self.sync_DB:

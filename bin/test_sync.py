@@ -18,7 +18,7 @@ def test():
 	
 	assert sync.array2csv([["test","test"], ["example value","example value 2"], ["example value","example value 2"], ["example value","example value 2"]]) == '"test","test"\n"example value","example value 2"\n"example value","example value 2"\n"example value","example value 2"\n', "Array2CSV fails (personal_code: 3b)"
 
-	assert sync(agent=False, sync_DB=True) != "", "test failed (personal_code: 0)" # check all code
+	assert sync(agent=False, sync_DB=(not False)) != "", "test failed (personal_code: 0)" # check all code
 
 	#assert agent.<function>(<values>) == <the result(s) you would like to have>, "<the fail message>"
 	
