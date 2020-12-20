@@ -156,13 +156,15 @@ class sync:
 		"""
 		# Connenct to the DB for every file
 		connection = pymysql.connect(self.config['host'], self.config['user'], self.config['password'], self.config['database'], int(self.config['port']))
-		self.print(f"   - Connected {i}° database")
+		self.print(f"   - Connected {i}° database for {file} table")
 
 		with connection.cursor() as cursor:
-			file_to_sync = sync.csv2array(open(os.path.join(self.input_folder, "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
+			file_to_sync = sync.csv2array(open(os.path.join(self.output_folder, file), "r").read())
+			self.print("File to sync readed")
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
+			self.print(f"   - Variabiles = {variabiles}"
 
 			try:
 				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.config['database']}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
@@ -178,6 +180,7 @@ class sync:
 					cursor.execute(f"SELECT * FROM {self.config['database']}.{tablename} WHERE ({variabiles}) = ({items});")
 				except:
 					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
+				self.print(f"     - Read if already exists {items}")
 
 				if len(cursor.fetchall()) == 0: # If not exist add it
 					try:
@@ -185,10 +188,12 @@ class sync:
 					except:
 						cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
 					self.print(f"   - Values added ({items})")
+				self.print(f"     - Added {items}")
 
 		# Push changes
 		connection.commit()
 		connection.close()
+		self.print("Ended single connection")
 
 if __name__ == "__main__":
 	# Check if user needs an help
