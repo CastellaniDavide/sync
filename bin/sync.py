@@ -146,9 +146,9 @@ class sync:
 			self.print(f" - {i}° File")
 			
 			# Get configuration
-			self.sync_online_single(file, connection, tablename=file[1].replace(".csv", ""))
+			self.sync_online_single(file, tablename=file[1].replace(".csv", ""))
 
-	def sync_online_single(self, file, connection, tablename):
+	def sync_online_single(self, file, tablename):
 		""" Sync a single file
 		"""
 		# Connenct to the DB for every file
