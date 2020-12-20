@@ -77,10 +77,10 @@ jobs:
         tree
     - name: Upload file(s)
       run: |
-         cat ./flussi/cloned/PCname_testfile.csv > testfile.csv
+         cat ./flussi/cloned/PCname_testfile.csv > PCname_testfile.csv
     - uses: actions/upload-artifact@v2
       with:
-        path: testfile.csv
+        path: PCname_testfile.csv
 
   # Agent part 2 
   sync-agent-2:
@@ -121,8 +121,8 @@ jobs:
         tree
     - name: Download file(s)
       run: |
-         rm ./flussi/testfile.csv
-         cp artifact/testfile.csv ./flussi/cloned/testfile.csv
+         rm ./flussi/PCname_testfile.csv
+         cp artifact/PCname_testfile.csv ./flussi/cloned/PCname_testfile.csv
     - name: Test with pytest
       run: |
         pytest

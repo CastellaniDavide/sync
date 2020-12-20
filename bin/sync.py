@@ -40,11 +40,10 @@ class sync:
 		# Read the config controller
 		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
 		try:
-			if not self.agent : self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
-			if not self.agent : self.print(str(self.config))
-			self.print("Configuration readed")
+			if self.sync_DB : self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
+			if self.sync_DB : self.print(str(self.config))
 
-			if (self.agent):
+			if (not self.agent or not self.sync_DB):
 				self.copy()	# Copy to the wanted folder
 
 			if self.sync_DB:
