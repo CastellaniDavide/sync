@@ -126,6 +126,7 @@ jobs:
     - name: View file structure 2
       run: |
         tree
+        cat ./flussi/cloned/PCname_testfile.csv
     - name: Test with pytest
       run: |
         pytest
