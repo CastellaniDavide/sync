@@ -51,10 +51,13 @@ jobs:
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW TABLES FROM sync;" # Check
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
 
-  # Agent part 2 
+  # Agent part 1
   sync-agent-1:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     steps:
     - uses: actions/checkout@v2
@@ -88,7 +91,10 @@ jobs:
   # Agent part 2 
   sync-agent-2:
     needs: sync-agent-1
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     # Create the DB
     services:
