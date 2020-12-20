@@ -47,11 +47,11 @@ Sync losts of projects.
  - .\sync.bat
 
 # Changelog
- - [Version_01.02-2020-12-19](#Version_0102-2020-12-19)
+ - [Version_01.02-2020-12-20](#Version_0102-2020-12-20)
  - [Version_01.01-2020-10-08](#Version_0101-2020-10-08)
 
-## Version_01.02-2020-12-19
- - Added GitHub Action
+## Version_01.02-2020-12-20
+ - Added GitHub Action for Agent and Agentless
  - Change sync.py
  - Optimize sync.bat: added the possibility to pass the args to python file
  - Update README.md

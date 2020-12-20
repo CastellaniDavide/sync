@@ -6,7 +6,7 @@ import pymysql
 from datetime import datetime
 
 __author__ = "help@castellanidavide.it"
-__version__ = "01.02 2020-12-19"
+__version__ = "01.02 2020-12-20"
 
 class sync:
 	def __init__ (self, agent=False, input_folder=None, output_folder=None, debug=False,):
@@ -16,10 +16,10 @@ class sync:
 		#Setup basic variabiles
 		self.start_time = datetime.now()
 		self.debug = debug
-		self.agent = agent
-
+		self.agent = False
+		print(self.agent)
 		# Open log
-		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
+		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.timestamp()}sync.log"), "a+")
 		self.log.write("Execution_code,Message,time")
 		self.print(f"Start")
 		self.print("Running: sync.py")
@@ -38,17 +38,20 @@ class sync:
 
 		# Read the config controller
 		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
-		self.print("Configuration readed")
+		try:
+			self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
+			self.print("Configuration readed")
 
-		# Sync offline
-		self.copy()
-		
-		if (not self.agent):
-			# Sync online if possible
-			try:
-				self.online_sync_all()
-			except:
-				self.print("Internet/ DB(s) not avariable")
+			if (self.agent):
+				self.copy()	# Copy to the wanted folder
+			else:
+				# Sync online if possible
+				try:
+					self.online_sync_all()
+				except:
+					self.print("Internet/ DB(s) not avariable")
+		except:
+			print("Error reading setting.json file, make sure it is in the input_folder and have correct syntax")
 		
 		# End
 		self.print(f"End time: {datetime.now()}")
@@ -132,26 +135,26 @@ class sync:
 	def online_sync_all(self):
 		""" If possible update all
 		"""
-		for i, file in enumerate(sync.csv2array(self.local_files)[1:]):
+		# Get files to upload
+		files = []
+		for (dirpath, dirnames, filenames) in os.walk(self.output_folder):
+			files = filenames
+			break
+		while "test.csv" in files: files.remove("test.csv") 
+
+		for i, file in enumerate(files):
 			self.print(f" - {i}° File")
 			
 			# Get configuration
-			host = file[2]
-			port = int(file[3])
-			user = file[5]
-			password = file[6]
-			database = file[4]
-			tablename = file[1].replace(".csv", "")
+			self.sync_online_single(file, connection, tablename=file[1].replace(".csv", ""))
 
-			# Connenct to the DB
-			connection = pymysql.connect(host, user, password, database, port)
-			self.print(f"   - Connected {i}° database")
-
-			self.sync_online_single(file, connection, database, tablename)
-
-	def sync_online_single(self, file, connection, database, tablename):
+	def sync_online_single(self, file, connection, tablename):
 		""" Sync a single file
 		"""
+		# Connenct to the DB for every file
+		connection = pymysql.connect(self.config['host'], self.config['user'], self.config['password'], self.config['database'], self.config['port'])
+		self.print(f"   - Connected {i}° database")
+
 		with connection.cursor() as cursor:
 			file_to_sync = sync.csv2array(open(os.path.join(self.input_folder, "cloned", f"""{sync.PC_name()}_{file[1]}"""), "r").read())
 				
@@ -159,7 +162,7 @@ class sync:
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
 
 			try:
-				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {database}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
+				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.config['database']}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
 			except:
 				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
 			self.print(f"   - Connected {tablename} table")
@@ -169,13 +172,13 @@ class sync:
 				items = sync.array2csv([items,])[:-1:]
 
 				try:
-					cursor.execute(f"SELECT * FROM {database}.{tablename} WHERE ({variabiles}) = ({items});")
+					cursor.execute(f"SELECT * FROM {self.config['database']}.{tablename} WHERE ({variabiles}) = ({items});")
 				except:
 					cursor.execute(f"SELECT * FROM {tablename} WHERE ({variabiles}) = ({items});")
 
 				if len(cursor.fetchall()) == 0: # If not exist add it
 					try:
-						cursor.execute(f"INSERT INTO {database}.{tablename} ({variabiles}) VALUES ({items});")
+						cursor.execute(f"INSERT INTO {self.config['database']}.{tablename} ({variabiles}) VALUES ({items});")
 					except:
 						cursor.execute(f"INSERT INTO {tablename} ({variabiles}) VALUES ({items});")
 					self.print(f"   - Values added ({items})")
