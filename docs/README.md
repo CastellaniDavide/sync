@@ -17,7 +17,7 @@ Sync losts of projects.
 ## Required
  - python3
  - pip3 packages (in repo core ```pip install -r requirements\requirements.txt```)
- - setup file_to_upload_and_where.csv
+ - setup file_to_upload_and_where.csv & settings.json
  
 ## Directories structure
  - .github
@@ -36,6 +36,7 @@ Sync losts of projects.
    - cloned
      - ... <- auto created
    - file_to_upload_and_where.csv <- ***need setup***
+   - settings.json <- ***need setup***
  - log
    - trace.log
  - requirements
