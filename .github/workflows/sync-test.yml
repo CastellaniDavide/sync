@@ -121,7 +121,7 @@ jobs:
         tree
     - name: Download file(s)
       run: |
-         rm ./flussi/PCname_testfile.csv
+         rm ./flussi/testfile.csv
          cp artifact/PCname_testfile.csv ./flussi/cloned/PCname_testfile.csv
     - name: Test with pytest
       run: |
