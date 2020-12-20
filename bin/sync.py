@@ -159,7 +159,8 @@ class sync:
 
 		with connection.cursor() as cursor:
 			file_to_sync = sync.csv2array(open(os.path.join(self.output_folder, file), "r").read())
-			self.print(f"   - File to sync readed ({file}): {open(os.path.join(self.output_folder, file), "r").read()} => {file_to_sync}")
+			self.print(open(os.path.join(self.output_folder, file), "r").read())
+			self.print(f"   - File to sync readed ({file}): {file_to_sync}")
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
