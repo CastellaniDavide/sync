@@ -17,7 +17,7 @@ class sync:
 		self.start_time = datetime.now()
 		self.debug = debug
 		self.agent = agent
-		print(self.agent)
+
 		# Open log
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.timestamp()}sync.log"), "a+")
 		self.log.write("Execution_code,Message,time")
@@ -39,7 +39,8 @@ class sync:
 		# Read the config controller
 		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
 		try:
-			self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
+			if not self.agent : self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
+			if not self.agent : print(self.config)
 			self.print("Configuration readed")
 
 			if (self.agent):
@@ -152,7 +153,7 @@ class sync:
 		""" Sync a single file
 		"""
 		# Connenct to the DB for every file
-		connection = pymysql.connect(self.config['host'], self.config['user'], self.config['password'], self.config['database'], self.config['port'])
+		connection = pymysql.connect(self.config['host'], self.config['user'], self.config['password'], self.config['database'], int(self.config['port']))
 		self.print(f"   - Connected {i}° database")
 
 		with connection.cursor() as cursor:

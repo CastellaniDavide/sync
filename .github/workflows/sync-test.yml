@@ -52,7 +52,7 @@ jobs:
     - name: Print DB(s)
       run: |
         mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW TABLES FROM sync;" # Check
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.testfile;" # Show my test table content
+        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
 
   # Agent part 2 
   sync-agent-1:
