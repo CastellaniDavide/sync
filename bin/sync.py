@@ -40,7 +40,7 @@ class sync:
 		self.local_files = open(os.path.join(self.input_folder, "file_to_upload_and_where.csv"), "r").read()
 		try:
 			if not self.agent : self.config = eval(open(os.path.join(self.input_folder, "settings.json"), "r").read())
-			if not self.agent : print(self.config)
+			if not self.agent : self.print(str(self.config))
 			self.print("Configuration readed")
 
 			if (self.agent):
