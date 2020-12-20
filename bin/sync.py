@@ -16,7 +16,7 @@ class sync:
 		#Setup basic variabiles
 		self.start_time = datetime.now()
 		self.debug = debug
-		self.agent = False
+		self.agent = agent
 		print(self.agent)
 		# Open log
 		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.timestamp()}sync.log"), "a+")
