@@ -164,7 +164,7 @@ class sync:
 				
 			# If not exist create database
 			variabiles = sync.array2csv([[f"""{a.replace(' ', '_')}""" for a in file_to_sync[0]],]).replace('""', '"').replace('"', '').replace('\n', '').replace('\\', '').replace('/', '')
-			self.print(f"   - Variabiles = {variabiles}"
+			self.print(f"   - Variabiles = {variabiles}")
 
 			try:
 				cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self.config['database']}.{tablename} (ID int AUTO_INCREMENT,{str([i+' varchar(255),' for i in variabiles.split(",")])[1:-1].replace("', '", "")[1:-2]},PRIMARY KEY (ID));""")
