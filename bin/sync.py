@@ -20,8 +20,8 @@ class sync:
 		self.sync_DB = sync_DB
 
 		# Open log
-		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.timestamp()}sync.log"), "a+")
-		self.log.write("Execution_code,Message,time")
+		self.log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "log", f"{self.start_time.strftime('%Y%m%d')}sync.log"), "a+")
+		self.log.write("Execution_code,Message,user_friendly_time,time")
 		self.print(f"Start")
 		self.print("Running: sync.py")
 
@@ -86,7 +86,7 @@ class sync:
 		"""Writes on the screen and in the log file
 		"""
 		if self.debug : print(item)
-		self.log.write(f""""{self.start_time.timestamp()}","{item}","{datetime.now().timestamp()}"\n""")
+		self.log.write(f""""{self.start_time.timestamp()}","{item}","{str(datetime.now())}","{datetime.now().timestamp()}"\n""")
 
 	def PC_name():
 		""" Return the PC user-name in standard mode
