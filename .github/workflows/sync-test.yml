@@ -27,7 +27,7 @@ jobs:
     - name: Install Database dependencies and test it
       run : |
         sudo apt-get install mysql-client -y
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW DATABASES;" # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SHOW DATABASES;" # Check
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
@@ -45,8 +45,8 @@ jobs:
         cat ./log/*
     - name: Print DB(s)
       run: |
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW TABLES FROM sync;" # Check
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SHOW TABLES FROM sync;" # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
 
   # Agent part 1
   sync-agent-1:
@@ -105,7 +105,7 @@ jobs:
     - name: Install Database dependencies and test it
       run : |
         sudo apt-get install mysql-client -y
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW DATABASES;" # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SHOW DATABASES;" # Check
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
@@ -137,5 +137,5 @@ jobs:
         cat ./log/*
     - name: Print DB(s)
       run: |
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SHOW TABLES FROM sync;" # Check
-        mysql -uroot -psyncpws -h0.0.0.0 -P32768 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SHOW TABLES FROM sync;" # Check
+        mysql -uroot -psyncpws -h0.0.0.0 -P49153 -e "SELECT * FROM sync.PCname_testfile;" # Show my test table content
