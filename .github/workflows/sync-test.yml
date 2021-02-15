@@ -8,7 +8,10 @@ jobs:
   # Agentless 
   sync-agentless:
 
-    runs-on: ubuntu-20.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     # Create the DB
     services:
@@ -51,7 +54,10 @@ jobs:
   # Agent part 1
   sync-agent-1:
 
-    runs-on: ubuntu-20.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     steps:
     - uses: actions/checkout@v2
@@ -85,7 +91,10 @@ jobs:
   # Agent part 2 
   sync-agent-2:
     needs: sync-agent-1
-    runs-on: ubuntu-20.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04]
 
     # Create the DB
     services:
